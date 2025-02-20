@@ -21,7 +21,7 @@ chmod +x $out/usr/local/netextender/neservice
 		license = pkgs.lib.licenses.unfree;
 		platforms = pkgs.lib.platforms.linux;
 		nixosModules = [
-      ( { config, lib, pkgs, ... }:
+      ( { config, lib, ... }:
         let
           # Reference the installed service wrapper.
 	netextenderPath = "${toString $out}/usr/local/netextender";
