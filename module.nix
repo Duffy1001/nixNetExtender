@@ -4,6 +4,9 @@
           # Reference the installed service wrapper.
 	netextenderPath = "${pkgs.netextender}/usr/local/netextender";
         in {
+	_module = {
+		args={inherit pkgs;};
+	};
           options.netextender = {
             enable = lib.mkOption {
               type = lib.types.bool;
