@@ -24,8 +24,7 @@ chmod +x $out/usr/local/netextender/neservice
       ( { config, lib, pkgs, ... }:
         let
           # Reference the installed service wrapper.
-        netextenderService = "${pkgs.netextender}/usr/local/netextender/neservice";
-	netextenderCli = "${pkgs.netextender}/usr/local/netextender/nxcli";
+	netextenderPath = "${toString out}/usr/local/netextender";
         in {
           options.netextender = {
             enable = lib.mkOption {
@@ -41,7 +40,7 @@ chmod +x $out/usr/local/netextender/neservice
               after = [ "network.target" ];
               wantedBy = [ "multi-user.target" ];
               serviceConfig = {
-                ExecStart = "${pkgs.netextender}/usr/local/netextender/NEService";
+                ExecStart = "${netextenderPath}/NEService";
                WorkingDirectory = "/var/sonicwall/NetExtender";
                 Environment = "NETEXTENDER_PROFILE_DIR=/var/sonicwall/NetExtender";
               };
