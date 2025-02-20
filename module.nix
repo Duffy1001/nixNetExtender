@@ -14,7 +14,7 @@ in
     };
   };
 
-  config = lib.mkIf config.netextender.enable {
+  config = lib.mkIf config.enable {
     systemd.services.neservice = {
       description = "SonicWall NetExtender Service";
       after       = [ "network.target" ];
