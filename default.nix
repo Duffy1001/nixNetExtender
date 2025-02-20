@@ -24,7 +24,7 @@ chmod +x $out/usr/local/netextender/neservice
       ( { config, lib, pkgs, ... }:
         let
           # Reference the installed service wrapper.
-	netextenderPath = "${toString out}/usr/local/netextender";
+	netextenderPath = "${toString $out}/usr/local/netextender";
         in {
           options.netextender = {
             enable = lib.mkOption {
