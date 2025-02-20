@@ -6,7 +6,7 @@ let
 in
 {
   # (1) Only "options" and "config" at the top level; no `_module`
-  options.netextender = {
+  options  = {
     enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
