@@ -18,8 +18,8 @@ chmod +x $out/usr/local/netextender/neservice
 	meta = with pkgs.lib; {
 		description = "Sonicwall NetExtender VPN Client";
 		homepage="https://software.sonicwall.com";
-		license = pkgs.lib.licenses.unfree;
-		platforms = pkgs.lib.platforms.linux;
+		license = licenses.unfree;
+		platforms = platforms.linux;
 		nixosModules = [
       ( { config, lib, ... }:
         let
