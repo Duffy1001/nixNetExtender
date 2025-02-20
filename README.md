@@ -1,1 +1,1 @@
-## Baic Sonicwall NetExtender Derivation
+## Basic Sonicwall NetExtender Derivation
