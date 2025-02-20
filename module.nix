@@ -1,5 +1,5 @@
 
-       { config, lib, pkgs ... }:
+       { config, lib, pkgs, ... }:
         let
           # Reference the installed service wrapper.
 	netextenderPath = "${pkgs.netextender}/usr/local/netextender";
