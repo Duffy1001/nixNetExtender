@@ -6,7 +6,7 @@
   outputs = { self, nixpkgs,... }: {
     packages.x86_64-linux.netextender = import ./default.nix { pkgs = nixpkgs.legacyPackages.x86_64-linux; };
 
-    nixosModules.netextender = import ./module.nix;
+   # nixosModules.netextender = import ./module.nix;
   };
 }
 
